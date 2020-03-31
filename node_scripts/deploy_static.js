@@ -62,9 +62,9 @@ async function deployStatic() {
     config.s3Bucket[args.env]
   ]);
   // Invalidate Cloudfront cache
-  if(config.domain[args.env]) {
-    await run("yarn", [ "cloudfront-invalidate-cache", "--cname", config.domain[args.env] ])
-  }
+  // if(config.domain[args.env]) {
+  //   await run("yarn", [ "cloudfront-invalidate-cache", "--cname", config.domain[args.env] ])
+  // }
 }
 
 deployStatic();

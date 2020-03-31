@@ -9,7 +9,7 @@ module.exports.config = {
     prod: "cleverland-prod"
   },
   domain: {
-    stage: "dj8dndl5ofjo6.cloudfront.net",
+    stage: "uport-stage.s3.amazonaws.com",
     prod: "uportlandia.uport.me"
   },
   cors: true

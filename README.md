@@ -160,6 +160,25 @@ async function deployAPI() {
 ```
 ---
 
+[新增儲存貯體政策以允許公有讀取](https://aws.amazon.com/tw/getting-started/projects/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/module-1/)
+
+選擇 `Permissions (許可)` 索引標籤，然後選擇 `Bucket Policy (儲存貯體政策)`
+將下列政策文件輸入至儲存貯體政策編輯器，同時將 `[YOUR_BUCKET_NAME]` 取代為您已在區段 1 建立的儲存貯體名稱：
+
+```js
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow", 
+            "Principal": "*", 
+            "Action": "s3:GetObject", 
+            "Resource": "arn:aws:s3:::[YOUR_BUCKET_NAME]/*" 
+        } 
+    ] 
+}
+```
+
 Amazon S3/uport-stage 屬性/靜態網站託管
 
 http://uport-stage.s3-website.us-east-1.amazonaws.com/
