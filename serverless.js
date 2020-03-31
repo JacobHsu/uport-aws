@@ -4,7 +4,7 @@ const slsConfig = {
   service: config.serviceName,
   provider: {
     name: "aws",
-    runtime: "nodejs8.10",
+    runtime: "nodejs12.x",
     region: config.region,
     environment: {
       ISSUERS: `$\{ssm:${config.ssmParam.issuers}~true}`

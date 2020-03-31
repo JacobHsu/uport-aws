@@ -5,11 +5,11 @@ module.exports.config = {
     issuers: "/uportlandia/${opt:stage}/issuers"
   },
   s3Bucket: {
-    stage: "cleverland-stage",
+    stage: "uport-stage",
     prod: "cleverland-prod"
   },
   domain: {
-    stage: "uportlandia.uport.space",
+    stage: "dj8dndl5ofjo6.cloudfront.net",
     prod: "uportlandia.uport.me"
   },
   cors: true
