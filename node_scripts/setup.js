@@ -248,19 +248,19 @@ async function setup() {
   const args = argParse();
 
   // Prerequisites
-  //await prerequisites();
+  await prerequisites();
 
   // Save issuer secrets in SSM
-  //await saveIssuerSecrets(args.env);
+  await saveIssuerSecrets(args.env);
 
   // Deploy Lambda
-  //await slsDeploy(args.env);
+  await slsDeploy(args.env);
 
   // Save Signer Url
-  //saveSignerUrl(args.env);
+  saveSignerUrl(args.env);
 
   // Create S3 Bucket for static assets
-  //await createS3Bucket(config.s3Bucket[args.env]);
+  await createS3Bucket(config.s3Bucket[args.env]);
 
   // Deploy Static site
   await deployStatic(args.env);
